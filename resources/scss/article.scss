@@ -1,0 +1,28 @@
+.arti {
+
+    &__card {
+
+        transition: background-color 300ms;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($color: #fff, $amount: 20);
+        }
+    }
+
+    &__cardimg {
+        max-width: 1000px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    // &__cardimg--spe {
+
+    //     img {
+    //         width: 100%;
+    //     }
+    // }
+}

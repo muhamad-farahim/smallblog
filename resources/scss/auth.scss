@@ -1,0 +1,28 @@
+.login {
+
+    &__grid {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__container {
+
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    &__card {
+
+        width: 400px;
+        // left: 30px;
+
+
+        @media(max-width: 400px) {
+            width: auto;
+            max-width: 400px;
+        }
+
+    }
+
+}

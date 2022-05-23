@@ -1,0 +1,14 @@
+.arti__card {
+  transition: background-color 300ms;
+  cursor: pointer;
+}
+.arti__card:hover {
+  background-color: #cccccc;
+}
+.arti__cardimg {
+  max-width: 1000px;
+  overflow: hidden;
+}
+.arti__cardimg img {
+  width: 100%;
+}

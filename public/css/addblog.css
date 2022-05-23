@@ -1,0 +1,19 @@
+.form__grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.form__container {
+  max-width: 90%;
+  padding: 20px;
+}
+.form__card {
+  width: 1000px;
+  left: 30px;
+}
+@media (max-width: 1000px) {
+  .form__card {
+    width: auto;
+    max-width: 1000px;
+  }
+}
