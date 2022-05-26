@@ -44,5 +44,5 @@ Route::get('/', function () {
 // CRUD ROUTE
 
 Route::any('/my_blogs/create/', [BlogController::class, 'add_blog'])->name('add_blog')->middleware('auth');
+Route::post('/my_blogs/delete/',[BlogController::class, 'delete_blog'])->name('delete_blog')->middleware('auth');
 Route::any('/my_blogs/{id}/', [BlogController::class, 'update_blog'])->name('update_blog')->middleware('auth');
-Route::post('/my_blogs/delete/', [BlogController::class, 'delete_blog'])->name('delete_blog')->middleware('auth');

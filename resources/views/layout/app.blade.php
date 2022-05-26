@@ -34,6 +34,9 @@
                 <a class="{{ Route::currentRouteNamed("my_blogs") ? "nav-link active" : "nav-link" }}" href={{ route("my_blogs") }}>My Blogs</a>
               </li>
               <li class="nav-item">
+                <a class="{{ Route::currentRouteNamed("add_blog") ? "nav-link active" : "nav-link" }}" href={{ route("add_blog") }}>Create Blogs</a>
+              </li>
+              <li class="nav-item">
                 <a class="{{ Route::currentRouteNamed("logout") ? "nav-link active" : "nav-link" }}" href={{ route("logout") }}>Log Out</a>
               </li>
               @endauth

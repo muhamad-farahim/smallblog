@@ -6,6 +6,17 @@
 
 <div class="container">
 
+    @if ($blogs === "empty")
+
+        <div class="w-100 h-100 text-center">
+
+            <h1>You dont have blogs under your name</h1>
+            <a href="{{ route('add_blog') }}"><h1>Create blog here</h1></a>
+
+
+        </div>
+        
+    @else
 
     @foreach ($blogs as $blog)
 
@@ -19,9 +30,10 @@
             <div class="card-text">
                 {{ $blog->desc }}
             </div>
-            <div class="card-subtitle text-muted">{{ $blog->getUsername() }}</div>
+        </a>
+            <a href="{{ route('user_blogs', ["username" => $blog->getUsername()]) }}" class="card-subtitle text-muted">{{ $blog->getUsername() }}</a>
             <div class="my-2 d-flex">
-                <button class="btn-lg btn-warning">Edit</button>
+                <a class="btn-lg btn-warning text-decoration-none" href="{{ route('update_blog', ['id' => $blog->id]) }}">Edit</a>
                 <form action="{{ route('delete_blog') }}" class="mx-2" method="post">
                     @csrf
                     <input type="hidden" name="id" value="{{ $blog->id }}">
@@ -31,7 +43,15 @@
         </div>
     </div>
 
-    </a>
+    
+
+
+
+                
+    @endforeach
+
+        
+    @endif
 
     @if (session('deletesuc'))
 
@@ -42,11 +62,6 @@
     </script>
         
     @endif
-
-                
-    @endforeach
-
-
 
 </div>
     

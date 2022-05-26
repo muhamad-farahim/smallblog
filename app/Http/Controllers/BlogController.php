@@ -58,7 +58,9 @@ class BlogController extends Controller
     }
 
     function specific_blog(string $username, int $blogid)
-    {
+    {   
+
+        // dd($username);
         $user = User::where('username', $username)->first();
 
         if (!$user) {
@@ -69,9 +71,11 @@ class BlogController extends Controller
 
         $blog = $user->specific_blog($blogid);
 
+
         if (!$blog) {
 
             abort(404);
+
         }
 
         return view('blog.specific', compact('user', 'blog'));

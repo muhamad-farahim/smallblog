@@ -32,7 +32,7 @@ class AuthenticationController extends Controller
 
                 session()->regenerate();
 
-                return redirect(route("my_blogs"));
+                return redirect()->intended('my_blogs');
             } else {
 
 

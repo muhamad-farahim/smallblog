@@ -59,7 +59,7 @@
             <input tagName value="{{ $blog->body }}" id="x" type="hidden" name="body">
             <trix-editor input="x"></trix-editor>
 
-            <input type="submit" value="CREATE" class="my-3 btn btn-primary">
+            <input type="submit" value="UPDATE" class="my-3 btn btn-primary">
 
             </div>
     </div>
