@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+    "post-install-cmd": [ "ln -sr storage/app/public public/storage" ],
     "content-hash": "fabcda59b78e6ce0b380ed3157d94356",
     "packages": [
         {
